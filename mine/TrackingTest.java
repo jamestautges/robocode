@@ -38,21 +38,17 @@ public class TrackingTest extends AdvancedRobot {
 		enemy.update(e);
 		
 		// tracking
-		out.println("Radar");
 		turnMultiplierLock();
 		
 		// movement
-		out.println("Movement");
 		movementSystem.update();
 		movementSystem.run();
 		
 		// targeting section
-		out.println("Targeting");
 		targetingSystem.update();
 		targetingSystem.run();
 		
 		execute();
-		out.println("Finished Turn");
 	}
 	
 	public void onHitWall(HitWallEvent e) {

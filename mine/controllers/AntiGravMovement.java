@@ -9,16 +9,16 @@ import robocode.util.Utils;
 
 public class AntiGravMovement {
 	
-	private AdvancedRobot me;
-	private EnemyRobot enemy;
+	protected AdvancedRobot me;
+	protected EnemyRobot enemy;
 	
-	private Rectangle2D battleField;
+	protected Rectangle2D battleField;
 
 	private final double enemyForceFactor = 10.0;
 	private final double perpendicularForceFactor = 2.0;
 	private final double wallForceFactor = 600.0;
 	private final double cornerForceFactor = 600.0;
-	private int direction = 1;
+	protected int direction = 1;
 	
 	private Point2D[] corners = new Point2D [4];
 
@@ -30,7 +30,7 @@ public class AntiGravMovement {
 	public AntiGravMovement(AdvancedRobot me, EnemyRobot enemy) {
 		this.me = me;
 		this.enemy = enemy;
-		this.battleField = new Rectangle2D(18, 18, me.getBattleFieldWidth() - 36, me.getBattleFieldHeight() - 36);;
+		this.battleField = new Rectangle2D(18, 18, me.getBattleFieldWidth() - 36, me.getBattleFieldHeight() - 36);
 		
 		corners[0] = new Point2D(0, 0);
 		corners[1] = new Point2D(me.getBattleFieldWidth(), 0);
