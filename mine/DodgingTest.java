@@ -5,7 +5,7 @@ import robocode.HitWallEvent;
 import robocode.ScannedRobotEvent;
 import robocode.util.Utils;
 
-import mine.controllers.AntiGravMovement;
+import mine.controllers.AntiGravDodging;
 import mine.controllers.IterativePredictiveTargeting;
 import mine.models.EnemyRobot;
 
@@ -15,11 +15,11 @@ public class DodgingTest extends AdvancedRobot {
 
 	private EnemyRobot enemy = new EnemyRobot(this);
 
-	private AntiGravMovement movementSystem;
+	private AntiGravDodging movementSystem;
 	private IterativePredictiveTargeting targetingSystem;
 
 	public void run() {
-		movementSystem = new AntiGravMovement(this, enemy);
+		movementSystem = new AntiGravDodging(this, enemy);
 		targetingSystem = new IterativePredictiveTargeting(this, enemy);
 
 		setAdjustRadarForGunTurn(true);
