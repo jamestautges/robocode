@@ -33,7 +33,7 @@ public class IterativePredictiveTargeting {
 					* Math.sin(themMotion.getHeading()), themMotion
 					.getVelocity() * Math.cos(themMotion.getHeading())));
 
-			themMotion = enemy.getNextMotion(themMotion);
+			themMotion = enemy.getNextCircularMotion(themMotion);
 
 			deltaTime++;
 		}
